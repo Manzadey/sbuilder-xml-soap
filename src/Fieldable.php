@@ -78,9 +78,13 @@ trait Fieldable
      *
      * @return $this
      */
-    public function addColumnTitle($title)
+    public function addColumnTitle($title, $prefix = null)
     {
-        $this->fields[] = $this->newField($title, ['name' => self::PREFIX . '_title']);
+        if(empty($prefix)) {
+            $prefix = self::PREFIX;
+        }
+
+        $this->fields[] = $this->newField($title, ['name' => $prefix . '_title']);
 
         return $this;
     }
