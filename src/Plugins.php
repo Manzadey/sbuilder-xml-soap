@@ -72,6 +72,13 @@ class Plugins
         return $this;
     }
 
+    public function addNewPlugin($name, \Closure $closure)
+    {
+        $this->addPlugin($closure(new Plugin($this->getXml(), $name)));
+
+        return $this;
+    }
+
     /**
      * @param string $name
      * @param array  $attributes
