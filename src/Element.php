@@ -117,10 +117,14 @@ class Element
     }
 
     /**
-     * @param string $prefix
+     * @param $prefix
+     *
+     * @return $this
      */
     public function setPrefix($prefix)
     {
         $this->prefix = $prefix;
+
+        return $this;
     }
 }
