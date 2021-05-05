@@ -112,6 +112,8 @@ class Plugins
      */
     public function upload($url, $token)
     {
+        $this->savePluginsToXml();
+
         return (new \SoapClient($url))->{$this->soapMethod}($token, $this->xml->saveXML());
     }
 
