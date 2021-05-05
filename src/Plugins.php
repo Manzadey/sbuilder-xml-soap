@@ -3,6 +3,7 @@
 namespace Manzadey\SbuilderXmlSoap;
 
 use DOMDocument;
+use ErrorException;
 use SoapClient;
 
 class Plugins
