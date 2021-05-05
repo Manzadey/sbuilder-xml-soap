@@ -8,7 +8,7 @@ class Element
     use Fieldable;
     use DeleteAttributeable;
 
-    const NAME = 'sb_field';
+    const NAME = 'sb_elem';
 
     const PREFIX = 'p';
 
