@@ -1,0 +1,23 @@
+{
+    "name": "manzadey/sbuilder-xml-soap",
+    "description": "SBuilder XML Generator for SOAP Client",
+    "type": "library",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Manzadey",
+            "email": "andrey.manzadey@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-dom": "*",
+        "ext-soap": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Manzadey\\SbuilderXmlSoap\\": "src"
+        }
+    }
+}
