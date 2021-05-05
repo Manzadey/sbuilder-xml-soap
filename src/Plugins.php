@@ -2,6 +2,9 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use DOMDocument;
+use SoapClient;
+
 class Plugins
 {
     /**
@@ -26,7 +29,7 @@ class Plugins
 
     public function __construct($version = '1.0', $encoding = 'utf-8')
     {
-        $this->xml        = new \DOMDocument($version, $encoding);
+        $this->xml        = new DOMDocument($version, $encoding);
         $this->xmlPlugins = $this->xml->appendChild($this->xml->createElement('sb_plugins'));
         $this->setUp();
     }
@@ -114,7 +117,13 @@ class Plugins
     {
         $this->savePluginsToXml();
 
-        return (new \SoapClient($url))->{$this->soapMethod}($token, $this->xml->saveXML());
+        try {
+            $result = (new SoapClient($url))->{$this->soapMethod}($token, $this->xml->saveXML());
+        } catch (ErrorException $exception) {
+            return $exception->getMessage();
+        }
+
+        return new Result($result);
     }
 
     /**
