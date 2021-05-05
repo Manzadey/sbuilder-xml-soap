@@ -11,8 +11,6 @@ class Category
 
     const NAME = 'sb_cat';
 
-    const PREFIX = 'cat';
-
     /**
      * @var \DOMDocument
      */
@@ -42,6 +40,11 @@ class Category
      * @var \Manzadey\SbuilderXmlSoap\Category[]
      */
     private $categories = [];
+
+    /**
+     * @var string
+     */
+    private $prefix = 'cat';
 
     /**
      * Category constructor.
@@ -133,5 +136,13 @@ class Category
         $this->setUpElements();
 
         return $this->DOMElement;
+    }
+
+    /**
+     * @param string $prefix
+     */
+    public function setPrefix($prefix)
+    {
+        $this->prefix = $prefix;
     }
 }

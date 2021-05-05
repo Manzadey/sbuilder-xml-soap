@@ -10,8 +10,6 @@ class Element
 
     const NAME = 'sb_elem';
 
-    const PREFIX = 'p';
-
     /**
      * @var \DOMDocument
      */
@@ -36,6 +34,11 @@ class Element
      * @var \DOMElement|false
      */
     private $DOMElement;
+
+    /**
+     * @var string
+     */
+    private $prefix = 'p';
 
     /**
      * Element constructor.
@@ -111,5 +114,13 @@ class Element
         $this->setUpLinks();
 
         return $this->DOMElement;
+    }
+
+    /**
+     * @param string $prefix
+     */
+    public function setPrefix($prefix)
+    {
+        $this->prefix = $prefix;
     }
 }

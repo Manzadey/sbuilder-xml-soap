@@ -78,13 +78,9 @@ trait Fieldable
      *
      * @return $this
      */
-    public function addColumnTitle($title, $prefix = null)
+    public function addColumnTitle($title)
     {
-        if(empty($prefix)) {
-            $prefix = self::PREFIX;
-        }
-
-        $this->fields[] = $this->newField($title, ['name' => $prefix . '_title']);
+        $this->fields[] = $this->newField($title, ['name' => $this->prefix . '_title']);
 
         return $this;
     }
@@ -96,7 +92,7 @@ trait Fieldable
      */
     public function addColumnActive($active)
     {
-        $this->fields[] = new Field($this->xml, $active, ['name' => self::PREFIX . '_active']);
+        $this->fields[] = new Field($this->xml, $active, ['name' => $this->prefix . '_active']);
 
         return $this;
     }
