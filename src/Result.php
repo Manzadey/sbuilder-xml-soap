@@ -5,12 +5,12 @@ namespace Manzadey\SbuilderXmlSoap;
 class Result
 {
     const CODE_ERRORS = [
-        1 => 'Раздел успешно изменен.',
-        2 => 'Раздел успешно добавлен.',
-        3 => 'Элемент успешно добавлен/изменен.',
-        4 => 'Ссылка на элемент X в разделе Y успешно добавлена.',
-        5 => 'Элемент X успешно удален.',
-        6 => 'Раздел Y успешно удален.',
+        1    => 'Раздел успешно изменен.',
+        2    => 'Раздел успешно добавлен.',
+        3    => 'Элемент успешно добавлен/изменен.',
+        4    => 'Ссылка на элемент X в разделе Y успешно добавлена.',
+        5    => 'Элемент X успешно удален.',
+        6    => 'Раздел Y успешно удален.',
         1001 => 'Предупреждение! У Вас нет прав на редактирование раздела. См. п.1.2',
         1002 => 'Предупреждение! Невозможно добавить раздел, т.к. не добавлен родительский раздел. См. п.1.2',
         1003 => 'Предупреждение! Невозможно добавить элемент, т.к. не добавлен родительский раздел. См. п.1.2',
@@ -84,13 +84,16 @@ class Result
         /* @var \DOMElement $message */
         foreach ($domMessages as $i => $message) {
             $this->messages[$i] = [
-                'message' => strip_tags($message->nodeValue),
-                'code' => $code = (int) $message->attributes->getNamedItem('code')->nodeValue,
+                'message'     => strip_tags($message->nodeValue),
+                'code'        => $code = (int) $message->attributes->getNamedItem('code')->nodeValue,
                 'codeMessage' => isset(self::CODE_ERRORS[$code]) ? self::CODE_ERRORS[$code] : null,
             ];
         }
     }
 
+    /**
+     * @return array[]
+     */
     public function messages()
     {
         return $this->messages;
@@ -113,7 +116,7 @@ class Result
     }
 
     /**
-     * @return array
+     * @return array[]
      */
     public function getWarnings()
     {
@@ -129,7 +132,7 @@ class Result
     }
 
     /**
-     * @return array
+     * @return array[]
      */
     public function getErrors()
     {
@@ -144,6 +147,9 @@ class Result
         return $messages;
     }
 
+    /**
+     * @return array[]
+     */
     public function getSuccesses()
     {
         $messages = [];
