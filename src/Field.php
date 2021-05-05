@@ -24,6 +24,13 @@ class Field
         $this->attributes = $attributes;
     }
 
+    public function isExtId()
+    {
+        $this->attributes['ext_id'] = 'true';
+
+        return $this;
+    }
+
     /**
      * @return \DOMElement|false
      */

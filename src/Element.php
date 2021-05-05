@@ -94,13 +94,6 @@ class Element
         return $this;
     }
 
-    public function isExtId()
-    {
-        $this->attributes['ext_id'] = 'true';
-
-        return $this;
-    }
-
     public function setUpLinks()
     {
         foreach ($this->links as $link) {
