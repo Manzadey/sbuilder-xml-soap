@@ -22,7 +22,7 @@ class Plugins
     /**
      * @var string
      */
-    protected $soapMethod = 'plPluginAdd';
+    protected $soapMethod = 'plPluginsAdd';
 
     public function __construct($version = '1.0', $encoding = 'utf-8')
     {
