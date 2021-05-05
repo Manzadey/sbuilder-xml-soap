@@ -14,9 +14,20 @@ class Plugins
      */
     private $plugins = [];
 
+    /**
+     * @var \DOMElement|\DOMNode|false
+     */
+    private $xmlPlugins;
+
+    /**
+     * @var string
+     */
+    protected $soapMethod = 'plPluginAdd';
+
     public function __construct($version = '1.0', $encoding = 'utf-8')
     {
-        $this->xml = new \DOMDocument($version, $encoding);
+        $this->xml        = new \DOMDocument($version, $encoding);
+        $this->xmlPlugins = $this->xml->appendChild($this->xml->createElement('sb_plugins'));
         $this->setUp();
     }
 
@@ -75,9 +86,8 @@ class Plugins
 
     private function savePluginsToXml()
     {
-        /* @var \Manzadey\SbuilderXmlSoap\Plugin $plugin */
         foreach ($this->plugins as $plugin) {
-            $this->xml->appendChild($plugin->getPlugin());
+            $this->xmlPlugins->appendChild($plugin->getPlugin());
         }
     }
 
@@ -102,6 +112,14 @@ class Plugins
      */
     public function upload($url, $token)
     {
-        return (new \SoapClient($url))->plPluginAdd($token, $this->xml->saveXML());
+        return (new \SoapClient($url))->{$this->soapMethod}($token, $this->xml->saveXML());
+    }
+
+    /**
+     * @param string $soapMethod
+     */
+    public function setSoapMethod($soapMethod)
+    {
+        $this->soapMethod = $soapMethod;
     }
 }
