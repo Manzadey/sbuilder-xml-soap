@@ -41,6 +41,26 @@ trait Fieldable
     }
 
     /**
+     * @param $array
+     *
+     * @return $this
+     */
+    public function addColumnFields($array)
+    {
+        if(is_array($array)) {
+            foreach ($array as $name => $value) {
+                if(is_int($name)) {
+                    $name = "user_f_{$name}";
+                }
+
+                $this->fields[] = $this->newField($value, compact('name'));
+            }
+        }
+
+        return $this;
+    }
+
+    /**
      * @param int    $id
      * @param string $value
      *
