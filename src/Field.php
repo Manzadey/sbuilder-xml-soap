@@ -24,9 +24,24 @@ class Field
         $this->attributes = $attributes;
     }
 
+    /**
+     * @return $this
+     */
     public function isExtId()
     {
         $this->attributes['ext_id'] = 'true';
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function name($name)
+    {
+        $this->attributes['name'] = $name;
 
         return $this;
     }
