@@ -68,6 +68,11 @@ class Plugins
         return new Plugin($this->getXml(), $name, $attributes);
     }
 
+    public function newSprav($attributes = [])
+    {
+        return new Sprav($this->getXml(), $attributes);
+    }
+
     private function savePluginsToXml()
     {
         /* @var \Manzadey\SbuilderXmlSoap\Plugin $plugin */
