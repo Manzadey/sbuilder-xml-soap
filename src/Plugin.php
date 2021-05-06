@@ -70,9 +70,7 @@ class Plugin
      */
     public function addNewCategory(\Closure $closure)
     {
-        $this->addCategory($closure(new Category($this->xml)));
-
-        return $this;
+        return $this->addCategory($closure(new Category($this->xml)));
     }
 
     /**
