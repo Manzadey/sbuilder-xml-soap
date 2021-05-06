@@ -26,7 +26,11 @@ class Category
     /**
      * @var string[]
      */
-    private $attributes;
+    private $attributes = [
+        'c_id'     => '',
+        'c_ext_id' => '',
+        'c_p_id'   => '',
+    ];
 
     /**
      * @var \DOMElement|false
@@ -59,10 +63,10 @@ class Category
      * @param \DOMDocument $xml
      * @param array        $attributes
      */
-    public function __construct(DOMDocument $xml, $attributes = ['c_id' => '', 'c_ext_id' => '', 'c_p_id' => ''])
+    public function __construct(DOMDocument $xml, $attributes = [])
     {
         $this->xml        = $xml;
-        $this->attributes = $attributes;
+        $this->attributes = array_merge($this->attributes, $attributes);
         $this->DOMElement = $this->xml->createElement(self::NAME);
     }
 
@@ -83,19 +87,20 @@ class Category
      *
      * @return \Manzadey\SbuilderXmlSoap\Element
      */
-    public function newElement($attributes = ['e_id' => '', 'e_ext_id' => ''])
+    public function newElement($attributes = [])
     {
         return new Element($this->xml, $attributes);
     }
 
     /**
      * @param \Closure $closure
+     * @param array    $attributes
      *
      * @return $this
      */
-    public function addNewElement(Closure $closure)
+    public function addNewElement(Closure $closure, $attributes = [])
     {
-        return $this->addElement($closure(new Element($this->xml)));
+        return $this->addElement($closure($this->newElement($attributes)));
     }
 
     /**

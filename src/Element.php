@@ -22,7 +22,10 @@ class Element
     /**
      * @var string[]
      */
-    private $attributes;
+    private $attributes = [
+        'e_id'     => '',
+        'e_ext_id' => '',
+    ];
 
     /**
      * @var \Manzadey\SbuilderXmlSoap\Field[]
@@ -50,10 +53,10 @@ class Element
      * @param \DOMDocument $xml
      * @param string[]     $attributes
      */
-    public function __construct(\DOMDocument $xml, $attributes = ['e_id' => '', 'e_ext_id' => ''])
+    public function __construct(\DOMDocument $xml, $attributes = [])
     {
         $this->xml        = $xml;
-        $this->attributes = $attributes;
+        $this->attributes = array_merge($this->attributes, $attributes);
         $this->DOMElement = $this->xml->createElement(self::NAME);
     }
 
@@ -94,7 +97,7 @@ class Element
                     $this->links[] = $linkCall($this->xml, $item);
                 }
             }
-        } elseif(is_int($link)) {
+        } else if(is_int($link)) {
             $this->links[] = $linkCall($this->xml, $link);
         }
 
