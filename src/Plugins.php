@@ -113,6 +113,18 @@ class Plugins
         return new Sprav($this->getXml(), $attributes);
     }
 
+    /**
+     * @param Closure $closure
+     *
+     * @return $this
+     */
+    public function addNewSprav(Closure $closure, $attributes = [])
+    {
+        $this->addPlugin($closure(new Sprav($this->getXml(), $attributes)));
+
+        return $this;
+    }
+
     private function savePluginsToXml()
     {
         foreach ($this->plugins as $plugin) {
