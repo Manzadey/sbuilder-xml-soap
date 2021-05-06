@@ -100,7 +100,56 @@ trait Fieldable
      */
     public function addColumnActive($active)
     {
-        $this->fields[] = $this->newField($active, ['name' => $this->prefix . '_active']);
+        $this->fields[] = $this->newField($active, ['name' => "{$this->prefix}_active"]);
+
+        return $this;
+    }
+
+    public function addColumnPrice($i, $value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => "p_price$i"]);
+
+        return $this;
+    }
+
+    public function addColumnProp($i, $value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => "s_prop$i"]);
+
+        return $this;
+    }
+
+    public function addColumnSort($value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => "{$this->prefix}_sort"]);
+
+        return $this;
+    }
+
+    public function addColumnPubStart($value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => 'p_pub_start']);
+
+        return $this;
+    }
+
+    public function addColumnPubEnd($value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => 'p_pub_end']);
+
+        return $this;
+    }
+
+    public function addColumnTags($value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => 'p_tags']);
+
+        return $this;
+    }
+
+    public function addColumnUrl($value)
+    {
+        $this->fields[] = $this->newField($value, ['name' => 'p_url']);
 
         return $this;
     }
