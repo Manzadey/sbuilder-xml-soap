@@ -70,7 +70,7 @@ $plugins->addNewPlugin(14, static function(Plugin $plugin) {
                 ->addColumnUserF(17, 'Наполнение для поля user_f_17')
                 ->addColumnUserF(19, 'Наполнение для поля user_f_19')
                 ->addNewElement(static function(Element $element) {
-                    $element
+                    return $element
                         ->addColumnTitle('Элемент 1')
                         ->addColumnField('p_price1', 10000)
                         ->addColumnActive(1)
@@ -78,8 +78,6 @@ $plugins->addNewPlugin(14, static function(Plugin $plugin) {
                         ->addNewField(4, static function(Field $field) {
                             return $field->isExtId()->userF(4);
                         });
-
-                    return $element;
                 })->addNewCategory(static function(Category $category) {
                     return $category
                         ->addColumnTitle('Подраздел раздела 1')
