@@ -153,8 +153,8 @@ class Category
     {
         $this->setUpAttributes();
         $this->setUpFields();
-        $this->setUpCategories();
         $this->setUpElements();
+        $this->setUpCategories();
 
         return $this->DOMElement;
     }
