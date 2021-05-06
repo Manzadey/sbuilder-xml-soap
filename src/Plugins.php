@@ -2,6 +2,7 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use Closure;
 use DOMDocument;
 use ErrorException;
 use SoapClient;
@@ -72,7 +73,7 @@ class Plugins
         return $this;
     }
 
-    public function addNewPlugin($name, \Closure $closure)
+    public function addNewPlugin($name, Closure $closure)
     {
         $this->addPlugin($closure(new Plugin($this->getXml(), $name)));
 
