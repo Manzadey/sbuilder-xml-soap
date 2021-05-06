@@ -3,6 +3,7 @@
 namespace Manzadey\SbuilderXmlSoap\Extensions;
 
 use Manzadey\SbuilderXmlSoap\Category;
+use Manzadey\SbuilderXmlSoap\Plugin;
 
 trait Categoryable
 {
@@ -16,6 +17,27 @@ trait Categoryable
         $this->categories[] = $category;
 
         return $this;
+    }
+
+    /**
+     * @param string[] $attributes
+     *
+     * @return \Manzadey\SbuilderXmlSoap\Category
+     */
+    public function newCategory($attributes = [])
+    {
+        return new Category($this->xml, $attributes);
+    }
+
+    /**
+     * @param \Closure $closure
+     * @param array    $attributes
+     *
+     * @return $this
+     */
+    public function addNewCategory(\Closure $closure, $attributes = [])
+    {
+        return $this->addCategory($closure($this->newCategory($attributes)));
     }
 
     private function setUpCategories()

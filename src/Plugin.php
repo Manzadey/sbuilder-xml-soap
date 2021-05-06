@@ -54,27 +54,6 @@ class Plugin
     }
 
     /**
-     * @param string[] $attributes
-     *
-     * @return \Manzadey\SbuilderXmlSoap\Category
-     */
-    public function newCategory($attributes = [])
-    {
-        return new Category($this->xml, $attributes);
-    }
-
-    /**
-     * @param \Closure $closure
-     * @param array    $attributes
-     *
-     * @return $this
-     */
-    public function addNewCategory(\Closure $closure, $attributes = [])
-    {
-        return $this->addCategory($closure($this->newCategory($attributes)));
-    }
-
-    /**
      * @param string $plugin
      */
     public function setPlugin($plugin)
