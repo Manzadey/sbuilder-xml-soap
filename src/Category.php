@@ -2,6 +2,8 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use Closure;
+use DOMDocument;
 use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
 use Manzadey\SbuilderXmlSoap\Extensions\Categoryable;
 use Manzadey\SbuilderXmlSoap\Extensions\DeleteAttributeable;
@@ -57,7 +59,7 @@ class Category
      * @param \DOMDocument $xml
      * @param array        $attributes
      */
-    public function __construct(\DOMDocument $xml, $attributes = ['c_id' => '', 'c_ext_id' => '', 'c_p_id' => ''])
+    public function __construct(DOMDocument $xml, $attributes = ['c_id' => '', 'c_ext_id' => '', 'c_p_id' => ''])
     {
         $this->xml        = $xml;
         $this->attributes = $attributes;
@@ -84,6 +86,16 @@ class Category
     public function newElement($attributes = ['e_id' => '', 'e_ext_id' => ''])
     {
         return new Element($this->xml, $attributes);
+    }
+
+    /**
+     * @param \Closure $closure
+     *
+     * @return $this
+     */
+    public function addNewElement(Closure $closure)
+    {
+        return $this->addElement($closure(new Element($this->xml)));
     }
 
     /**
