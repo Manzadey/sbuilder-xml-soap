@@ -100,7 +100,7 @@ trait Fieldable
      */
     public function addColumnActive($active)
     {
-        $this->fields[] = new Field($this->xml, $active, ['name' => $this->prefix . '_active']);
+        $this->fields[] = $this->newField($active, ['name' => $this->prefix . '_active']);
 
         return $this;
     }
