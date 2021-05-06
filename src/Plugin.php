@@ -63,6 +63,13 @@ class Plugin
         return new Category($this->xml, $attributes);
     }
 
+    public function addNewCategory(\Closure $closure)
+    {
+        $this->addCategory($closure(new Category($this->xml)));
+
+        return $this;
+    }
+
     /**
      * @param string $plugin
      */
