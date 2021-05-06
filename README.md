@@ -120,3 +120,16 @@ $plugins->addNewPlugin(14, static function(Plugin $plugin) {
 
 echo $plugins->save(); // XML
 ```
+
+Выгрузка в WSDL:
+```php
+use Manzadey\SbuilderXmlSoap\Plugins;
+
+$plugins = new Plugins;
+
+// code..
+
+$plugins->upload('https://test.ru/cms/admin/soap.php?wsdl', '9c06c094a959dedbe84e52a95b7ebfbe'); // \Manzadey\SbuilderXmlSoap\Result
+
+
+```
