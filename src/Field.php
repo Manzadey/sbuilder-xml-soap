@@ -44,15 +44,29 @@ class Field
     }
 
     /**
-     * @param string $name
+     * @param string|int $name
      *
      * @return $this
      */
     public function name($name)
     {
+        if(is_int($name)) {
+            $name = "user_f_$name";
+        }
+
         $this->attributes['name'] = $name;
 
         return $this;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return $this
+     */
+    public function userF($id)
+    {
+        return $this->name((int) $id);
     }
 
     /**
