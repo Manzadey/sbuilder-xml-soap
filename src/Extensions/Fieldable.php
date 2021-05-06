@@ -2,6 +2,7 @@
 
 namespace Manzadey\SbuilderXmlSoap\Extensions;
 
+use Closure;
 use Manzadey\SbuilderXmlSoap\Field;
 
 trait Fieldable
@@ -27,6 +28,11 @@ trait Fieldable
     public function newField($value, $attributes = [])
     {
         return new Field($this->xml, $value, $attributes);
+    }
+
+    public function addNewField($value, Closure $closure, $attributes = [])
+    {
+        return $this->addField($closure($this->newField($value, $attributes)));
     }
 
     /**
