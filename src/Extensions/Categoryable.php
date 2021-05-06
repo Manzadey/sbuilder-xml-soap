@@ -2,6 +2,8 @@
 
 namespace Manzadey\SbuilderXmlSoap\Extensions;
 
+use Manzadey\SbuilderXmlSoap\Category;
+
 trait Categoryable
 {
     /**

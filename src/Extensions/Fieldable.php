@@ -2,12 +2,14 @@
 
 namespace Manzadey\SbuilderXmlSoap\Extensions;
 
+use Manzadey\SbuilderXmlSoap\Field;
+
 trait Fieldable
 {
     /**
      * @param \Manzadey\SbuilderXmlSoap\Field $field
      *
-     * @return \Manzadey\SbuilderXmlSoap\Fieldable
+     * @return \Manzadey\SbuilderXmlSoap\Extensions\Fieldable
      */
     public function addField(Field $field)
     {
