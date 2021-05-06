@@ -2,6 +2,11 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\Extensions\Categoryable;
+use Manzadey\SbuilderXmlSoap\Extensions\DeleteAttributeable;
+use Manzadey\SbuilderXmlSoap\Extensions\Fieldable;
+
 class Category
 {
     use Attributeable;
@@ -119,7 +124,6 @@ class Category
 
     private function setUpElements()
     {
-        /* @var \Manzadey\SbuilderXmlSoap\Element $element */
         foreach ($this->elements as $element) {
             $this->DOMElement->appendChild($element->getDOM());
         }

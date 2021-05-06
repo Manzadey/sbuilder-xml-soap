@@ -2,6 +2,8 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
+
 class Field
 {
     use Attributeable;
@@ -18,6 +20,13 @@ class Field
      */
     private $DOMElement;
 
+    /**
+     * Field constructor.
+     *
+     * @param \DOMDocument $xml
+     * @param              $value
+     * @param array        $attributes
+     */
     public function __construct(\DOMDocument $xml, $value, $attributes = [])
     {
         $this->DOMElement = $xml->createElement('sb_field', $value);

@@ -3,6 +3,8 @@
 namespace Manzadey\SbuilderXmlSoap;
 
 use DOMDocument;
+use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\Extensions\Categoryable;
 
 /**
  * Class Plugin

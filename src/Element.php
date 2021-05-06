@@ -2,6 +2,10 @@
 
 namespace Manzadey\SbuilderXmlSoap;
 
+use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\Extensions\DeleteAttributeable;
+use Manzadey\SbuilderXmlSoap\Extensions\Fieldable;
+
 class Element
 {
     use Attributeable;

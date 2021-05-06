@@ -29,6 +29,12 @@ class Plugins
      */
     protected $soapMethod = 'plPluginsAdd';
 
+    /**
+     * Plugins constructor.
+     *
+     * @param string $version
+     * @param string $encoding
+     */
     public function __construct($version = '1.0', $encoding = 'utf-8')
     {
         $this->xml        = new DOMDocument($version, $encoding);
@@ -73,6 +79,12 @@ class Plugins
         return $this;
     }
 
+    /**
+     * @param          $name
+     * @param Closure $closure
+     *
+     * @return $this
+     */
     public function addNewPlugin($name, Closure $closure)
     {
         $this->addPlugin($closure(new Plugin($this->getXml(), $name)));
@@ -91,6 +103,11 @@ class Plugins
         return new Plugin($this->getXml(), $name, $attributes);
     }
 
+    /**
+     * @param array $attributes
+     *
+     * @return \Manzadey\SbuilderXmlSoap\Sprav
+     */
     public function newSprav($attributes = [])
     {
         return new Sprav($this->getXml(), $attributes);
