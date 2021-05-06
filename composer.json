@@ -4,6 +4,12 @@
     "type": "library",
     "minimum-stability": "dev",
     "license": "MIT",
+    "keywords": [
+        "CMS S.Builder",
+        "sbuilder",
+        "soap",
+        "xml"
+    ],
     "authors": [
         {
             "name": "Andrey Manzadey",
