@@ -1,10 +1,10 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
-use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
-use Manzadey\SbuilderXmlSoap\Extensions\DeleteAttributeable;
-use Manzadey\SbuilderXmlSoap\Extensions\Fieldable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\DeleteAttributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Fieldable;
 
 class Element
 {
@@ -28,7 +28,7 @@ class Element
     ];
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Field[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Field[]
      */
     private $fields = [];
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
 use DOMDocument;
-use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
-use Manzadey\SbuilderXmlSoap\Extensions\Categoryable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Categoryable;
 
 /**
  * Class Plugin
  *
- * @package Manzadey\SbuilderXmlSoap
+ * @package Manzadey\SbuilderXmlSoap\v1
  */
 class Plugin
 {
@@ -34,7 +34,7 @@ class Plugin
     private $attributes;
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Category[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Category[]
      */
     private $categories = [];
 

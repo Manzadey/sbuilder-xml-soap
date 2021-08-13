@@ -1,13 +1,13 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
 use Closure;
 use DOMDocument;
-use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
-use Manzadey\SbuilderXmlSoap\Extensions\Categoryable;
-use Manzadey\SbuilderXmlSoap\Extensions\DeleteAttributeable;
-use Manzadey\SbuilderXmlSoap\Extensions\Fieldable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Categoryable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\DeleteAttributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Fieldable;
 
 class Category
 {
@@ -38,17 +38,17 @@ class Category
     private $DOMElement;
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Field[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Field[]
      */
     private $fields = [];
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Element[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Element[]
      */
     private $elements = [];
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Category[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Category[]
      */
     private $categories = [];
 
@@ -71,7 +71,7 @@ class Category
     }
 
     /**
-     * @param \Manzadey\SbuilderXmlSoap\Element $element
+     * @param \Manzadey\SbuilderXmlSoap\v1\Element $element
      *
      * @return $this
      */
@@ -85,7 +85,7 @@ class Category
     /**
      * @param string[] $attributes
      *
-     * @return \Manzadey\SbuilderXmlSoap\Element
+     * @return \Manzadey\SbuilderXmlSoap\v1\Element
      */
     public function newElement($attributes = [])
     {

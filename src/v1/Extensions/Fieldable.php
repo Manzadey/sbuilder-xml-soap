@@ -1,16 +1,16 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap\Extensions;
+namespace Manzadey\SbuilderXmlSoap\v1\Extensions;
 
 use Closure;
-use Manzadey\SbuilderXmlSoap\Field;
+use Manzadey\SbuilderXmlSoap\v1\Field;
 
 trait Fieldable
 {
     /**
-     * @param \Manzadey\SbuilderXmlSoap\Field $field
+     * @param \Manzadey\SbuilderXmlSoap\v1\Field $field
      *
-     * @return \Manzadey\SbuilderXmlSoap\Extensions\Fieldable
+     * @return \Manzadey\SbuilderXmlSoap\v1\Extensions\Fieldable
      */
     public function addField(Field $field)
     {
@@ -23,7 +23,7 @@ trait Fieldable
      * @param string $value
      * @param array  $attributes
      *
-     * @return \Manzadey\SbuilderXmlSoap\Field
+     * @return \Manzadey\SbuilderXmlSoap\v1\Field
      */
     public function newField($value, $attributes = [])
     {
@@ -156,7 +156,6 @@ trait Fieldable
 
     public function setUpFields()
     {
-        /* @var \Manzadey\SbuilderXmlSoap\Field $field */
         foreach ($this->fields as $field) {
             $this->DOMElement->appendChild($field->getField());
         }

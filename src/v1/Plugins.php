@@ -1,6 +1,6 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
 use Closure;
 use DOMDocument;
@@ -15,7 +15,7 @@ class Plugins
     private $xml;
 
     /**
-     * @var \Manzadey\SbuilderXmlSoap\Plugin[]
+     * @var \Manzadey\SbuilderXmlSoap\v1\Plugin[]
      */
     private $plugins = [];
 
@@ -56,13 +56,13 @@ class Plugins
     }
 
     /**
-     * @param \Manzadey\SbuilderXmlSoap\Plugin $plugin
+     * @param \Manzadey\SbuilderXmlSoap\v1\Plugin $plugin
      *
-     * @return \Manzadey\SbuilderXmlSoap\Plugins
+     * @return \Manzadey\SbuilderXmlSoap\v1\Plugins
      */
     public function addPlugin(Plugin $plugin)
     {
-        /* @var \Manzadey\SbuilderXmlSoap\Plugin $pluginItem */
+        /* @var \Manzadey\SbuilderXmlSoap\v1\Plugin $pluginItem */
         $plugins = [];
         foreach ($this->plugins as $pluginItem) {
             $plugins[] = $pluginItem->getAttribute('p_id');
@@ -96,7 +96,7 @@ class Plugins
      * @param string $name
      * @param array  $attributes
      *
-     * @return \Manzadey\SbuilderXmlSoap\Plugin
+     * @return \Manzadey\SbuilderXmlSoap\v1\Plugin
      */
     public function newPlugin($name, $attributes = [])
     {
@@ -106,7 +106,7 @@ class Plugins
     /**
      * @param array $attributes
      *
-     * @return \Manzadey\SbuilderXmlSoap\Sprav
+     * @return \Manzadey\SbuilderXmlSoap\v1\Sprav
      */
     public function newSprav($attributes = [])
     {

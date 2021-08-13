@@ -1,6 +1,6 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
 class Link
 {

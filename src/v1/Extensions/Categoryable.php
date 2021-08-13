@@ -1,14 +1,13 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap\Extensions;
+namespace Manzadey\SbuilderXmlSoap\v1\Extensions;
 
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Plugin;
+use Manzadey\SbuilderXmlSoap\v1\Category;
 
 trait Categoryable
 {
     /**
-     * @param \Manzadey\SbuilderXmlSoap\Category $category
+     * @param \Manzadey\SbuilderXmlSoap\v1\Category $category
      *
      * @return $this
      */
@@ -22,7 +21,7 @@ trait Categoryable
     /**
      * @param string[] $attributes
      *
-     * @return \Manzadey\SbuilderXmlSoap\Category
+     * @return \Manzadey\SbuilderXmlSoap\v1\Category
      */
     public function newCategory($attributes = [])
     {
@@ -42,7 +41,6 @@ trait Categoryable
 
     private function setUpCategories()
     {
-        /* @var \Manzadey\SbuilderXmlSoap\Category $category */
         foreach ($this->categories as $category) {
             $this->DOMElement->appendChild($category->getCategory());
         }

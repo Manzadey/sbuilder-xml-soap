@@ -1,6 +1,6 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap\Extensions;
+namespace Manzadey\SbuilderXmlSoap\v1\Extensions;
 
 trait DeleteAttributeable
 {

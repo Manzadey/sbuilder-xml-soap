@@ -1,8 +1,8 @@
 <?php
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SbuilderXmlSoap\v1;
 
-use Manzadey\SbuilderXmlSoap\Extensions\Attributeable;
+use Manzadey\SbuilderXmlSoap\v1\Extensions\Attributeable;
 
 class Field
 {
