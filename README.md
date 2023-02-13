@@ -131,3 +131,8 @@ $plugins = (new Plugins)->addPlugin(
 
 echo $plugins->save();
 ```
+
+## Загрузка данных
+```php
+$plugins->upload('https://url.to/soap/client', 'token');
+```
