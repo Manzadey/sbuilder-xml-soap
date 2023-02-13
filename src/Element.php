@@ -10,12 +10,14 @@ use DOMException;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
 use Manzadey\SbuilderXmlSoap\Traits\HasField;
 use Manzadey\SbuilderXmlSoap\Traits\HasIsDelete;
+use Manzadey\SbuilderXmlSoap\Traits\HasWhen;
 
 final class Element
 {
     use HasField;
     use HasAttribute;
     use HasIsDelete;
+    use HasWhen;
 
     /**
      * @var array<int, int>
