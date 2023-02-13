@@ -2,6 +2,12 @@
 
 Пакет представляет собой простое API для генерации и выгрузки данных в формате XML в CMS SBuilder.
 
+## Установка
+
+```bash
+composer require manzadey/sbuilder-xml-soap
+```
+
 ## Создание структуры XML файла
 
 ![img.png](structure.png)
@@ -136,3 +142,17 @@ echo $plugins->save();
 ```php
 $plugins->upload('https://url.to/soap/client', 'token');
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Testing
+
+```bash
+composer test
+```
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

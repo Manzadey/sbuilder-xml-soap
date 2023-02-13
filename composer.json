@@ -29,5 +29,8 @@
         "psr-4": {
             "Manzadey\\SbuilderXmlSoap\\": "src"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
     }
 }
