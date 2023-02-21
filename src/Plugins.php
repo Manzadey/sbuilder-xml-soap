@@ -16,6 +16,8 @@ final class Plugins
      */
     readonly private DOMDocument $xml;
 
+    private bool $is_generate = false;
+
     /**
      * @var array<int, \Manzadey\SbuilderXmlSoap\Plugin>
      */
@@ -106,7 +108,11 @@ final class Plugins
      */
     public function save() : false|string
     {
-        $this->generate();
+        if(!$this->is_generate) {
+            $this->is_generate = true;
+
+            $this->generate();
+        }
 
         return $this->xml()->saveXML();
     }
