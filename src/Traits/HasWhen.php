@@ -8,10 +8,14 @@ use Closure;
 
 trait HasWhen
 {
-    public function when(bool $value, Closure $closure) : static
+    public function when(bool $value, Closure $closureTrue, Closure $closureFalse = null) : static
     {
         if($value) {
-            return $closure($this);
+            return $closureTrue($this);
+        }
+
+        if($closureFalse !== null) {
+            return $closureFalse($this);
         }
 
         return $this;
