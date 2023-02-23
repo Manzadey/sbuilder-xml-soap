@@ -1,5 +1,7 @@
 # SBuilder XML SOAP generator
 
+[![PHPUnit tests](https://github.com/Manzadey/sbuilder-xml-soap/actions/workflows/phpunit-tests.yml/badge.svg?event=push)](https://github.com/Manzadey/sbuilder-xml-soap/actions/workflows/phpunit-tests.yml)
+
 Пакет представляет собой простое API для генерации и выгрузки данных в формате XML в CMS SBuilder.
 
 ## Установка
