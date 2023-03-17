@@ -35,3 +35,10 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - [Add](https://github.com/Manzadey/sbuilder-xml-soap/commit/ef40542e58bd4e5ca8838d8a0239068bf0e0228a) method `tap()` for Element and Category classes.
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.2.0...v1.3.0)
+
+## [1.4.0] - 2023-03-17
+
+### Added
+- [Add](https://github.com/Manzadey/sbuilder-xml-soap/commit/d5fae84eec4449003e6312fc82d7794be133c966) method `dd()`.
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.3.0...v1.4.0)
