@@ -7,10 +7,13 @@ namespace Manzadey\SbuilderXmlSoap;
 use Closure;
 use DOMDocument;
 use Manzadey\SbuilderXmlSoap\Exceptions\PluginsArrayException;
+use Manzadey\SbuilderXmlSoap\Traits\HasDump;
 use SoapClient;
 
 final class Plugins
 {
+    use HasDump;
+
     /**
      * @var \DOMDocument
      */

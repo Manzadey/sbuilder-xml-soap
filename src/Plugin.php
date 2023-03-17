@@ -8,11 +8,13 @@ use DOMDocument;
 use DOMElement;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
 use Manzadey\SbuilderXmlSoap\Traits\HasCategory;
+use Manzadey\SbuilderXmlSoap\Traits\HasDump;
 
 final class Plugin
 {
     use HasAttribute;
     use HasCategory;
+    use HasDump;
 
     public function __construct(
         readonly private string $pluginId

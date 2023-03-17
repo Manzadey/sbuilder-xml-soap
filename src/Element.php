@@ -8,6 +8,7 @@ use DOMDocument;
 use DOMElement;
 use DOMException;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
+use Manzadey\SbuilderXmlSoap\Traits\HasDump;
 use Manzadey\SbuilderXmlSoap\Traits\HasField;
 use Manzadey\SbuilderXmlSoap\Traits\HasIsDelete;
 use Manzadey\SbuilderXmlSoap\Traits\HasTap;
@@ -20,6 +21,7 @@ final class Element
     use HasIsDelete;
     use HasWhen;
     use HasTap;
+    use HasDump;
 
     /**
      * @var array<int, int>

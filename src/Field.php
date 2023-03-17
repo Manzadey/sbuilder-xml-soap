@@ -7,10 +7,12 @@ namespace Manzadey\SbuilderXmlSoap;
 use DOMDocument;
 use DOMElement;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
+use Manzadey\SbuilderXmlSoap\Traits\HasDump;
 
 final class Field
 {
     use HasAttribute;
+    use HasDump;
 
     public function __construct(
         readonly private string $name,
