@@ -1,5 +1,7 @@
 # SBuilder XML SOAP generator
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/manzadey/sbuilder-xml-soap.svg?style=flat-square)](https://packagist.org/packages/manzadey/sbuilder-xml-soap)
+[![Total Downloads](https://img.shields.io/packagist/dt/manzadey/sbuilder-xml-soap.svg?style=flat-square)](https://packagist.org/packages/manzadey/sbuilder-xml-soap)
 [![PHPUnit tests](https://github.com/Manzadey/sbuilder-xml-soap/actions/workflows/phpunit-tests.yml/badge.svg?event=push)](https://github.com/Manzadey/sbuilder-xml-soap/actions/workflows/phpunit-tests.yml)
 
 Пакет представляет собой простое API для генерации и выгрузки данных в формате XML в CMS SBuilder.
