@@ -10,6 +10,7 @@ use DOMException;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
 use Manzadey\SbuilderXmlSoap\Traits\HasField;
 use Manzadey\SbuilderXmlSoap\Traits\HasIsDelete;
+use Manzadey\SbuilderXmlSoap\Traits\HasTap;
 use Manzadey\SbuilderXmlSoap\Traits\HasWhen;
 
 final class Element
@@ -18,6 +19,7 @@ final class Element
     use HasAttribute;
     use HasIsDelete;
     use HasWhen;
+    use HasTap;
 
     /**
      * @var array<int, int>

@@ -12,6 +12,7 @@ use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
 use Manzadey\SbuilderXmlSoap\Traits\HasCategory;
 use Manzadey\SbuilderXmlSoap\Traits\HasField;
 use Manzadey\SbuilderXmlSoap\Traits\HasIsDelete;
+use Manzadey\SbuilderXmlSoap\Traits\HasTap;
 use Manzadey\SbuilderXmlSoap\Traits\HasWhen;
 
 final class Category
@@ -21,6 +22,7 @@ final class Category
     use HasCategory;
     use HasIsDelete;
     use HasWhen;
+    use HasTap;
 
     /**
      * @var array<int, \Manzadey\SbuilderXmlSoap\Element>
