@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Manzadey\SbuilderXmlSoap;
 
-use Closure;
 use DOMDocument;
 use DOMElement;
-use Manzadey\SbuilderXmlSoap\Exceptions\CategoriesArrayException;
 use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
 use Manzadey\SbuilderXmlSoap\Traits\HasCategory;
 
