@@ -11,8 +11,7 @@ composer require manzadey/sbuilder-xml-soap
 ```
 
 ## Создание структуры XML файла
-
-![img.png](structure.png)
+![Создание структуры XML файла](https://user-images.githubusercontent.com/34869211/225909894-d27f00b8-8a92-4fa2-b4a1-ddd76426ef9c.png)
 
 ```php
 use Manzadey\SbuilderXmlSoap\Plugins;
@@ -65,8 +64,8 @@ echo $plugins->save();
 ```
 
 ## Создание структуры вместе со справочником
+![Создание структуры вместе со справочником](https://user-images.githubusercontent.com/34869211/225909996-3e51b16f-dcfd-4983-8254-85bd4ab5f336.png)
 
-![img.png](sprav.png)
 
 ```php
 use Manzadey\SbuilderXmlSoap\Plugins;
@@ -113,8 +112,7 @@ $plugins = (new Plugins)->addPlugin(
 ```
 
 ## Удаление элементов
-
-![img.png](img.png)
+![Удаление элементов](https://user-images.githubusercontent.com/34869211/225910092-3f5e0921-705f-4288-86db-822d1bfa1a02.png)
 
 ```php
 use Manzadey\SbuilderXmlSoap\Plugins;
