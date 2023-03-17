@@ -29,7 +29,7 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.1.0...v1.2.0)
 
-## [1.3.0] - 2023-03-23
+## [1.3.0] - 2023-03-17
 
 ### Added
 - [Add](https://github.com/Manzadey/sbuilder-xml-soap/commit/ef40542e58bd4e5ca8838d8a0239068bf0e0228a) method `tap()` for Element and Category classes.
