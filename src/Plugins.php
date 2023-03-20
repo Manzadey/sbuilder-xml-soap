@@ -112,7 +112,7 @@ final class Plugins
     public function save() : false|string
     {
         if(!$this->is_generate) {
-            $this->is_generate = true;
+            $this->is_generate = !$this->is_generate;
 
             $this->generate();
         }
