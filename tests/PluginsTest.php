@@ -10,6 +10,19 @@ use PHPUnit\Framework\TestCase;
 
 class PluginsTest extends TestCase
 {
+    public function testNewPlugin() : void
+    {
+        $plugins = new Plugins;
+
+        $this->assertInstanceOf(Plugin::class, $plugins->newPlugin('sb_plugins_1'));
+
+        $plugins->newPlugin('sb_plugins_2', static fn(Plugin $plugin) : Plugin => $plugin);
+        $this->assertCount(1, $plugins->getPlugins());
+
+        $plugins->newPlugin('sb_plugins_3', static fn(Plugin $plugin) : Plugin => $plugin);
+        $this->assertCount(2, $plugins->getPlugins());
+    }
+
     public function testAddPlugins() : void
     {
         $plugins = new Plugins;
