@@ -60,5 +60,12 @@ class PluginsTest extends TestCase
 
         $this->assertEquals(53, strlen($plugins->save()));
         $this->assertSame(1, $xml->getElementsByTagName('sb_plugins')->count());
+
+        $plugins = new Plugins;
+        $plugins->newPlugin('pl_sprav', static fn(Plugin $plugin) : Plugin => $plugin);
+        $xml = $plugins->getDOMDocument();
+
+        $this->assertEquals(97, strlen($plugins->save()));
+        $this->assertSame(1, $xml->getElementsByTagName('sb_plugin')->count());
     }
 }
