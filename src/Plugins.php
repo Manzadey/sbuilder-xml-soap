@@ -72,9 +72,14 @@ final class Plugins
             }
         }
 
-        $this->plugins[] = $plugin;
+        $this->pushPlugin($plugin);
 
         return $this;
+    }
+
+    private function pushPlugin(Plugin $plugin) : void
+    {
+        $this->plugins[] = $plugin;
     }
 
     /**
@@ -99,8 +104,7 @@ final class Plugins
             );
         }
 
-        $this->getDOMDocument()
-            ->appendChild($sbPlugins);
+        $this->getDOMDocument()->appendChild($sbPlugins);
     }
 
     public function getDOMDocument() : DOMDocument
@@ -119,9 +123,7 @@ final class Plugins
             $this->generate();
         }
 
-        return $this
-            ->getDOMDocument()
-            ->saveXML();
+        return $this->getDOMDocument()->saveXML();
     }
 
     /**
