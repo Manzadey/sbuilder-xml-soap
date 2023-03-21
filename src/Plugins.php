@@ -51,7 +51,9 @@ final class Plugins
     public function newPlugin(string $id, Closure|callable $callable = null) : Plugins|Plugin
     {
         if(!is_null($callable)) {
-            return $this->addPlugin($callable(new Plugin($id)));
+            return $this->addPlugin(
+                $callable($this->newPlugin($id))
+            );
         }
 
         return new Plugin($id);
