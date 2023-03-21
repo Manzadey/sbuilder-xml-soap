@@ -58,11 +58,11 @@ final class Plugins
     }
 
     /**
-     * @param  \Manzadey\SbuilderXmlSoap\Plugin|\Closure  $plugin
+     * @param  \Manzadey\SbuilderXmlSoap\Plugin|\Closure|callable  $plugin
      *
      * @return $this
      */
-    public function addPlugin(Plugin|Closure $plugin) : Plugins
+    public function addPlugin(Plugin|Closure|callable $plugin) : Plugins
     {
         if($plugin instanceof Closure) {
             $plugin = $plugin($this);
@@ -93,7 +93,7 @@ final class Plugins
         $sbPlugins = $this->getDOMDocument()
             ->createElement('sb_plugins');
 
-        foreach ($this->plugins as $plugin) {
+        foreach ($this->getPlugins() as $plugin) {
             $sbPlugins->appendChild(
                 $plugin->getDOMElement($this->getDOMDocument())
             );
