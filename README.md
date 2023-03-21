@@ -90,9 +90,9 @@ $plugins = (new Plugins)->addPlugin(
                         )
                 )
         )
-)->addPlugin(
-    static fn(Plugins $plugins) : Plugin => $plugins->newPlugin('pl_sprav')
-        ->addCategory(
+)->newPlugin(
+    'pl_sprav',
+    static fn(Plugin $plugin) : Plugin => $plugin->addCategory(
             static fn(Plugin $plugin) : Category => $plugin->newCategory()
                 ->addField('cat_title', 'Цвета')
                 ->addField('show_prop1', '1')
