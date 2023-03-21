@@ -42,3 +42,14 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - [Add](https://github.com/Manzadey/sbuilder-xml-soap/commit/d5fae84eec4449003e6312fc82d7794be133c966) method `dd()`.
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.3.0...v1.4.0)
+
+## [1.5.0 - 1.5.2] - 2023-03-20
+
+### Added
+- [Add](https://github.com/Manzadey/sbuilder-xml-soap/commit/d5fae84eec4449003e6312fc82d7794be133c966) method `dd()`.
+
+### Changes
+- Changing the names of methods for creating a DOM element and DOMDocument in classes;
+- Set #2 parameter from method `newPlugin()` in Plugins class. Added type `callable`.
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.4.0...v1.5.2)
