@@ -44,11 +44,16 @@ final class Plugins
 
     /**
      * @param  string  $id
+     * @param  \Closure|callable|null  $callable
      *
-     * @return \Manzadey\SbuilderXmlSoap\Plugin
+     * @return \Manzadey\SbuilderXmlSoap\Plugins|\Manzadey\SbuilderXmlSoap\Plugin
      */
-    public function newPlugin(string $id) : Plugin
+    public function newPlugin(string $id, Closure|callable $callable = null) : Plugins|Plugin
     {
+        if(!is_null($callable)) {
+            return $this->addPlugin($callable(new Plugin($id)));
+        }
+
         return new Plugin($id);
     }
 
@@ -85,23 +90,20 @@ final class Plugins
      */
     private function generate() : void
     {
-        $sbPlugins = $this->xml()
+        $sbPlugins = $this->getDOMDocument()
             ->createElement('sb_plugins');
 
         foreach ($this->plugins as $plugin) {
             $sbPlugins->appendChild(
-                $plugin->xml($this->xml())
+                $plugin->getDOMElement($this->getDOMDocument())
             );
         }
 
-        $this->xml()
+        $this->getDOMDocument()
             ->appendChild($sbPlugins);
     }
 
-    /**
-     * @return DOMDocument
-     */
-    public function xml() : DOMDocument
+    public function getDOMDocument() : DOMDocument
     {
         return $this->xml;
     }
@@ -117,7 +119,9 @@ final class Plugins
             $this->generate();
         }
 
-        return $this->xml()->saveXML();
+        return $this
+            ->getDOMDocument()
+            ->saveXML();
     }
 
     /**
