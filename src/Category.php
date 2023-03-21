@@ -89,6 +89,13 @@ final class Category
         return new Element($id, $extId);
     }
 
+    public function pushElement(Closure|callable $closure, string $id = null, string $extId = null) : Category
+    {
+        return $this->addElement(
+            $closure($this->newElement($id, $extId))
+        );
+    }
+
     /**
      * @param  Element|Closure  $element
      *

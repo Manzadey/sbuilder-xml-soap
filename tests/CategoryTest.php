@@ -64,6 +64,27 @@ class CategoryTest extends TestCase
         }
     }
 
+    public function testPushElement() : void
+    {
+        $this->category->pushElement(
+            static fn(Element $element) : Element => $element
+        );
+        $this->assertCount(1, $this->category->getElements());
+
+        $this->category->pushElement(
+            static fn(Element $element) : Element => $element,
+            '123',
+        );
+        $this->assertCount(2, $this->category->getElements());
+
+        $this->category->pushElement(
+            static fn(Element $element) : Element => $element,
+            '123',
+            '456'
+        );
+        $this->assertCount(3, $this->category->getElements());
+    }
+
     public function testAddElements() : void
     {
         $this->category->addElement(new Element);
