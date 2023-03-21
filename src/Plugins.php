@@ -28,12 +28,12 @@ final class Plugins
 
     public function __construct()
     {
+        $this->xml = $this->createDOMDocument();
     }
 
     /**
      * @return \DOMDocument
      */
-    private function createXml() : DOMDocument
     private function createDOMDocument() : DOMDocument
     {
         $xml               = new DOMDocument('1.0', 'utf-8');
