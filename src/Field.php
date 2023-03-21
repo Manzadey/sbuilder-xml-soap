@@ -53,7 +53,7 @@ final class Field
     /**
      * @throws \DOMException
      */
-    public function xml(DOMDocument $document) : bool|DOMElement
+    public function getDOMElement(DOMDocument $document) : DOMElement
     {
         $domElement = $document->createElement('sb_field', $this->getValue());
 

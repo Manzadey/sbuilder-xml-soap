@@ -100,7 +100,7 @@ class CategoryTest extends TestCase
     public function testXml() : void
     {
         $dom = new DOMDocument;
-        $xml = $this->category->xml($dom);
+        $xml = $this->category->getDOMElement($dom);
 
         $this->assertEquals('sb_cat', $xml->nodeName);
         $this->assertTrue($xml->hasAttribute('c_id'));

@@ -35,7 +35,7 @@ class FieldTest extends TestCase
         $this->field->extId();
 
         $dom = new DOMDocument;
-        $xml = $this->field->xml($dom);
+        $xml = $this->field->getDOMElement($dom);
 
         $this->assertTrue($xml->hasAttribute('name'));
         $this->assertTrue($xml->hasAttribute('ext_id'));

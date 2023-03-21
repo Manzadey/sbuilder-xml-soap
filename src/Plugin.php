@@ -37,7 +37,7 @@ final class Plugin
      * @throws \DOMException
      * @return \DOMElement
      */
-    public function xml(DOMDocument $document) : DOMElement
+    public function getDOMElement(DOMDocument $document) : DOMElement
     {
         $domElement = $document->createElement("sb_plugin");
 
@@ -47,7 +47,7 @@ final class Plugin
 
         foreach ($this->categories as $category) {
             $domElement->appendChild(
-                $category->xml($document)
+                $category->getDOMElement($document)
             );
         }
 

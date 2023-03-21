@@ -71,7 +71,7 @@ final class Element
     /**
      * @throws DOMException
      */
-    public function xml(DOMDocument $document) : bool|DOMElement
+    public function getDOMElement(DOMDocument $document) : DOMElement
     {
         $domElement = $document->createElement('sb_elem');
 
@@ -80,7 +80,7 @@ final class Element
         }
 
         foreach ($this->getFields() as $field) {
-            $domElement->appendChild($field->xml($document));
+            $domElement->appendChild($field->getDOMElement($document));
         }
 
         foreach ($this->getLinks() as $link) {

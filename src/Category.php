@@ -120,7 +120,7 @@ final class Category
     /**
      * @throws \DOMException
      */
-    public function xml(DOMDocument $document) : bool|DOMElement
+    public function getDOMElement(DOMDocument $document) : DOMElement
     {
         $domElement = $document->createElement('sb_cat');
 
@@ -130,7 +130,7 @@ final class Category
 
         foreach ($this->getFields() as $field) {
             $domElement->appendChild(
-                $field->xml($document)
+                $field->getDOMElement($document)
             );
         }
 
@@ -140,13 +140,13 @@ final class Category
             }
 
             $domElement->appendChild(
-                $element->xml($document)
+                $element->getDOMElement($document)
             );
         }
 
         foreach ($this->getCategories() as $category) {
             $domElement->appendChild(
-                $category->xml($document)
+                $category->getDOMElement($document)
             );
         }
 

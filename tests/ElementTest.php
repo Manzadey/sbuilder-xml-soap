@@ -69,7 +69,7 @@ class ElementTest extends TestCase
     public function testXml() : void
     {
         $dom = new DOMDocument;
-        $xml = $this->element->xml($dom);
+        $xml = $this->element->getDOMElement($dom);
 
         $this->assertTrue($xml->hasAttribute('e_id'));
         $this->assertTrue($xml->hasAttribute('e_ext_id'));
@@ -78,15 +78,15 @@ class ElementTest extends TestCase
 
 
         $this->addLink(123);
-        $xml = $this->element->xml($dom);
+        $xml = $this->element->getDOMElement($dom);
         $this->assertSame(1, $xml->getElementsByTagName('sb_link')->count());
 
         $this->addAttribute('test_attribute', 'test value from test attribute');
-        $xml = $this->element->xml($dom);
+        $xml = $this->element->getDOMElement($dom);
         $this->assertTrue($xml->hasAttribute('test_attribute'));
 
         $this->addField('test_field', 'test field value');
-        $xml = $this->element->xml($dom);
+        $xml = $this->element->getDOMElement($dom);
         $this->assertSame(1, $xml->getElementsByTagName('sb_field')->count());
 
         $dom->appendChild($xml);

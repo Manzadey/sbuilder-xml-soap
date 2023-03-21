@@ -79,7 +79,7 @@ class PluginTest extends TestCase
         $dom          = new DOMDocument;
         $this->plugin = new Plugin('pl_plugin_1');
 
-        $domElement = $this->plugin->xml($dom);
+        $domElement = $this->plugin->getDOMElement($dom);
 
         $this->assertEquals('sb_plugin', $domElement->nodeName);
         $this->assertTrue($domElement->hasAttribute('p_id'));
