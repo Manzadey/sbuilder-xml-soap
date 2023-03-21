@@ -56,7 +56,7 @@ class PluginsTest extends TestCase
     public function testXml() : void
     {
         $plugins = new Plugins;
-        $xml     = $plugins->xml();
+        $xml     = $plugins->getDOMDocument();
 
         $this->assertEquals(53, strlen($plugins->save()));
         $this->assertSame(1, $xml->getElementsByTagName('sb_plugins')->count());
