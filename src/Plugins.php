@@ -132,9 +132,9 @@ final class Plugins
      * @throws \SoapFault
      * @throws \DOMException
      */
-    public function upload(string $url, string $token)
+    public function upload(string $url, string $token, array $options = null)
     {
-        return (new SoapClient($url))
+        return (new SoapClient($url, $options))
             ->plPluginsAdd($token, $this->save());
     }
 }

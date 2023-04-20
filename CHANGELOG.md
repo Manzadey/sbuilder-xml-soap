@@ -53,3 +53,10 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - Set #2 parameter from method `newPlugin()` in Plugins class. Added type `callable`.
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.4.0...v1.5.2)
+
+## [1.5.3] - 2023-04-20
+
+### Added
+- Added `array $options = null` argument for `\Manzadey\SbuilderXmlSoap\Plugins::upload` method
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.5.2...v1.5.3)
