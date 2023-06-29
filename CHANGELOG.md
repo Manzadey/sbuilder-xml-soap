@@ -76,3 +76,10 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - Added `array $options = null` argument for `\Manzadey\SbuilderXmlSoap\Plugins::upload` method
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.6.0...v1.6.1)
+
+## [1.7.0] - 2023-06-29
+
+### Added
+- Added `setUrl()`, `setToken()`, `setOptions()` methods argument for `\Manzadey\SbuilderXmlSoap\Plugins` class
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.6.1...v1.7.0)

@@ -26,9 +26,36 @@ final class Plugins
      */
     private array $plugins = [];
 
+    private ?string $url = null;
+
+    private ?string $token = null;
+
+    private ?array $options = null;
+
     public function __construct()
     {
         $this->xml = $this->createDOMDocument();
+    }
+
+    public function setUrl(?string $url) : Plugins
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function setToken(?string $token) : Plugins
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    public function setOptions(?array $options) : Plugins
+    {
+        $this->options = $options;
+
+        return $this;
     }
 
     /**
@@ -132,9 +159,21 @@ final class Plugins
      * @throws \SoapFault
      * @throws \DOMException
      */
-    public function upload(string $url, string $token, array $options = null)
+    public function upload(string $url = null, string $token = null, array $options = null)
     {
-        return (new SoapClient($url, $options))
-            ->plPluginsAdd($token, $this->save());
+        if(filter_var($url, FILTER_VALIDATE_URL)) {
+            $this->setUrl($url);
+        }
+
+        if(is_string($token)) {
+            $this->setToken($token);
+        }
+
+        if(is_array($options)) {
+            $this->setOptions($options);
+        }
+
+        return (new SoapClient($this->url, $this->options))
+            ->plPluginsAdd($this->token, $this->save());
     }
 }
