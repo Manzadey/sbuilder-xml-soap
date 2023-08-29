@@ -63,4 +63,15 @@ trait HasField
     {
         return $this->fields;
     }
+
+    public function getField(string $name) : Field|false
+    {
+        foreach ($this->fields as $field) {
+            if($field->getName() === $name) {
+                return $field;
+            }
+        }
+
+        return false;
+    }
 }

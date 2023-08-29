@@ -83,3 +83,13 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - Added `setUrl()`, `setToken()`, `setOptions()` methods argument for `\Manzadey\SbuilderXmlSoap\Plugins` class
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.6.1...v1.7.0)
+
+## [1.8.0] - 2023-08-29
+
+### Added
+- Added `getField()` methods argument for `\Manzadey\SbuilderXmlSoap\Traits\HasField` trait
+
+### Changes
+- Update `createDOMDocument()` method from `\Manzadey\SbuilderXmlSoap\Plugins` class.
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.7.0...v1.8.0)
