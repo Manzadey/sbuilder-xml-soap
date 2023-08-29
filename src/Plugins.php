@@ -160,7 +160,7 @@ final class Plugins
      * @throws \SoapFault
      * @throws \DOMException
      */
-    public function upload(string $url = null, string $token = null, array $options = null)
+    public function upload(string $url = null, string $token = null, array $options = [])
     {
         if(filter_var($url, FILTER_VALIDATE_URL)) {
             $this->setUrl($url);
@@ -170,7 +170,7 @@ final class Plugins
             $this->setToken($token);
         }
 
-        if(is_array($options)) {
+        if($options) {
             $this->setOptions($options);
         }
 
