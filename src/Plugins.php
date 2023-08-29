@@ -30,7 +30,7 @@ final class Plugins
 
     private ?string $token = null;
 
-    private ?array $options = null;
+    private array $options = [];
 
     public function __construct()
     {
