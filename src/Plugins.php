@@ -63,8 +63,9 @@ final class Plugins
      */
     private function createDOMDocument() : DOMDocument
     {
-        $xml               = new DOMDocument('1.0', 'utf-8');
-        $xml->formatOutput = true;
+        $xml                     = new DOMDocument('1.0', 'utf-8');
+        $xml->preserveWhiteSpace = false;
+        $xml->formatOutput       = true;
 
         return $xml;
     }
