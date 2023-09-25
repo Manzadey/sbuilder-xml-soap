@@ -31,10 +31,15 @@ final class Element
     public function __construct(
         readonly private ?string $id = null,
         readonly private ?string $extId = null,
+        array                    $fields = [],
     )
     {
         $this->addAttribute('e_id', (string) $id);
         $this->addAttribute('e_ext_id', (string) $extId);
+
+        if(!empty($fields)) {
+            $this->addNewFields($fields);
+        }
     }
 
     /**

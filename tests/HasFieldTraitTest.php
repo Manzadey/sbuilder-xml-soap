@@ -61,4 +61,29 @@ class HasFieldTraitTest extends TestCase
         $this->assertInstanceOf(Field::class, $this->getField('user_f_1'));
         $this->assertFalse($this->getField('p_active'));
     }
+
+    public function testAddNewFields() : void
+    {
+        $this->addNewFields([
+            'p_title'  => 'test',
+            'user_f_1' => '12345',
+            'user_f_3' => 12345,
+            'user_f_4' => 124.45
+        ]);
+
+        $this->assertCount(4, $this->getFields());
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->addNewFields([
+            'user_f_5' => [
+                'value1',
+                'value2',
+            ],
+        ]);
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->addNewFields([
+            'user_f_5' => new stdClass(),
+        ]);
+    }
 }

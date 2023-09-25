@@ -93,3 +93,13 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 - Update `createDOMDocument()` method from `\Manzadey\SbuilderXmlSoap\Plugins` class.
 
 [See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.7.0...v1.8.0)
+
+## [1.9.0] - 2023-09-25
+
+### Added
+- Added `addNewFields(array $array)` methods argument for `\Manzadey\SbuilderXmlSoap\Traits\HasField` trait
+
+### Changes
+- Update constructor in `Manzadey\SbuilderXmlSoap\Category` and `Manzadey\SbuilderXmlSoap\Element` classes. Added `array $field = []` argument.
+
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.7.0...v1.8.0)

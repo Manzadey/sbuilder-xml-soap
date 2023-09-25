@@ -35,11 +35,16 @@ final class Category
         readonly private ?string $id = null,
         readonly private ?string $extId = null,
         private ?string          $pId = null,
+        array                    $fields = [],
     )
     {
         $this->addAttribute('c_id', (string) $id);
         $this->addAttribute('c_ext_id', (string) $extId);
         $this->addAttribute('c_p_id', (string) $pId);
+
+        if(!empty($fields)) {
+            $this->addNewFields($fields);
+        }
     }
 
     /**

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Manzadey\SbuilderXmlSoap\Traits;
 
 use Closure;
+use InvalidArgumentException;
 use Manzadey\SbuilderXmlSoap\Exceptions\FieldAddException;
 use Manzadey\SbuilderXmlSoap\Exceptions\FieldsArrayException;
 use Manzadey\SbuilderXmlSoap\Field;
@@ -25,6 +26,23 @@ trait HasField
     public function newField(string $name, string $value) : Field
     {
         return new Field($name, $value);
+    }
+
+    public function addNewFields(array $fields) : static
+    {
+        foreach ($fields as $field => $value) {
+            if(is_bool($value)) {
+                $value = (int) $value;
+            }
+
+            if(!is_scalar($value)) {
+                throw new InvalidArgumentException(sprintf('The value cannot be an %s', gettype($value)));
+            }
+
+            $this->addField($field, (string) $value);
+        }
+
+        return $this;
     }
 
     /**
