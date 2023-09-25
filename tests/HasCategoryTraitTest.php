@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Traits\HasCategory;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Traits\HasCategory;
 use PHPUnit\Framework\TestCase;
 
 class HasCategoryTraitTest extends TestCase

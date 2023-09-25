@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Element;
-use Manzadey\SbuilderXmlSoap\Exceptions\FieldAddException;
-use Manzadey\SbuilderXmlSoap\Exceptions\FieldsArrayException;
-use Manzadey\SbuilderXmlSoap\Field;
-use Manzadey\SbuilderXmlSoap\Traits\HasField;
+use Manzadey\SBuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Exceptions\FieldAddException;
+use Manzadey\SBuilderXmlSoap\Exceptions\FieldsArrayException;
+use Manzadey\SBuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Traits\HasField;
 use PHPUnit\Framework\TestCase;
 
 class HasFieldTraitTest extends TestCase

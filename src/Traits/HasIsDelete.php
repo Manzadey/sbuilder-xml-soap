@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Traits;
+namespace Manzadey\SBuilderXmlSoap\Traits;
 
 /**
- * @mixin \Manzadey\SbuilderXmlSoap\Traits\HasAttribute
+ * @mixin \Manzadey\SBuilderXmlSoap\Traits\HasAttribute
  */
 trait HasIsDelete
 {

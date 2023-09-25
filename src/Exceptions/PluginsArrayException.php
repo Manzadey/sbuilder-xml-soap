@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Exceptions;
+namespace Manzadey\SBuilderXmlSoap\Exceptions;
 
 use LogicException;
-use Manzadey\SbuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Plugin;
 
 class PluginsArrayException extends LogicException
 {

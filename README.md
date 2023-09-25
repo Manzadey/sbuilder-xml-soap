@@ -16,11 +16,11 @@ composer require manzadey/sbuilder-xml-soap
 ![Создание структуры XML файла](https://user-images.githubusercontent.com/34869211/225909894-d27f00b8-8a92-4fa2-b4a1-ddd76426ef9c.png)
 
 ```php
-use Manzadey\SbuilderXmlSoap\Plugins;
-use Manzadey\SbuilderXmlSoap\Plugin;
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Field;
-use Manzadey\SbuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Plugins;
+use Manzadey\SBuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Element;
 
 $plugins = new Plugins;
 
@@ -70,11 +70,11 @@ echo $plugins->save();
 
 
 ```php
-use Manzadey\SbuilderXmlSoap\Plugins;
-use Manzadey\SbuilderXmlSoap\Plugin;
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Field;
-use Manzadey\SbuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Plugins;
+use Manzadey\SBuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Element;
 
 $plugins = (new Plugins)->addPlugin(
     static fn(Plugins $plugins) : Plugin => $plugins->newPlugin('pl_plugin_14')
@@ -117,10 +117,10 @@ $plugins = (new Plugins)->addPlugin(
 ![Удаление элементов](https://user-images.githubusercontent.com/34869211/225910092-3f5e0921-705f-4288-86db-822d1bfa1a02.png)
 
 ```php
-use Manzadey\SbuilderXmlSoap\Plugins;
-use Manzadey\SbuilderXmlSoap\Plugin;
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Plugins;
+use Manzadey\SBuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Element;
 
 $plugins = (new Plugins)->addPlugin(
     static fn(Plugins $plugins) : Plugin => $plugins

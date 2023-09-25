@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Traits;
+namespace Manzadey\SBuilderXmlSoap\Traits;
 
 use Closure;
 use InvalidArgumentException;
-use Manzadey\SbuilderXmlSoap\Exceptions\FieldAddException;
-use Manzadey\SbuilderXmlSoap\Exceptions\FieldsArrayException;
-use Manzadey\SbuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Exceptions\FieldAddException;
+use Manzadey\SBuilderXmlSoap\Exceptions\FieldsArrayException;
+use Manzadey\SBuilderXmlSoap\Field;
 
 trait HasField
 {
     /**
-     * @var array<int, \Manzadey\SbuilderXmlSoap\Field>
+     * @var array<int, \Manzadey\SBuilderXmlSoap\Field>
      */
     private array $fields = [];
 
@@ -46,7 +46,7 @@ trait HasField
     }
 
     /**
-     * @param  \Manzadey\SbuilderXmlSoap\Field|\Closure|string  $field
+     * @param  \Manzadey\SBuilderXmlSoap\Field|\Closure|string  $field
      * @param  string|null  $value
      *
      * @return $this

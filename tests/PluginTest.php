@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Element;
-use Manzadey\SbuilderXmlSoap\Exceptions\CategoriesArrayException;
-use Manzadey\SbuilderXmlSoap\Field;
-use Manzadey\SbuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Exceptions\CategoriesArrayException;
+use Manzadey\SBuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Plugin;
 use PHPUnit\Framework\TestCase;
 
 class PluginTest extends TestCase

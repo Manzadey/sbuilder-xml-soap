@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Exceptions\PluginsArrayException;
-use Manzadey\SbuilderXmlSoap\Field;
-use Manzadey\SbuilderXmlSoap\Plugin;
-use Manzadey\SbuilderXmlSoap\Plugins;
+use Manzadey\SBuilderXmlSoap\Exceptions\PluginsArrayException;
+use Manzadey\SBuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Plugin;
+use Manzadey\SBuilderXmlSoap\Plugins;
 use PHPUnit\Framework\TestCase;
 
 class PluginsTest extends TestCase

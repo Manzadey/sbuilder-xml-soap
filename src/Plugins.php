@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SBuilderXmlSoap;
 
 use Closure;
 use DOMDocument;
-use Manzadey\SbuilderXmlSoap\Exceptions\PluginsArrayException;
-use Manzadey\SbuilderXmlSoap\Traits\HasDump;
+use Manzadey\SBuilderXmlSoap\Exceptions\PluginsArrayException;
+use Manzadey\SBuilderXmlSoap\Traits\HasDump;
 use SoapClient;
 
 final class Plugins
@@ -22,7 +22,7 @@ final class Plugins
     private bool $is_generate = false;
 
     /**
-     * @var array<int, \Manzadey\SbuilderXmlSoap\Plugin>
+     * @var array<int, \Manzadey\SBuilderXmlSoap\Plugin>
      */
     private array $plugins = [];
 
@@ -74,7 +74,7 @@ final class Plugins
      * @param  string  $id
      * @param  \Closure|callable|null  $callable
      *
-     * @return \Manzadey\SbuilderXmlSoap\Plugins|\Manzadey\SbuilderXmlSoap\Plugin
+     * @return \Manzadey\SBuilderXmlSoap\Plugins|\Manzadey\SBuilderXmlSoap\Plugin
      */
     public function newPlugin(string $id, Closure|callable $callable = null) : Plugins|Plugin
     {
@@ -88,7 +88,7 @@ final class Plugins
     }
 
     /**
-     * @param  \Manzadey\SbuilderXmlSoap\Plugin|\Closure|callable  $plugin
+     * @param  \Manzadey\SBuilderXmlSoap\Plugin|\Closure|callable  $plugin
      *
      * @return $this
      */

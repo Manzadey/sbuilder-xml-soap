@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Traits;
+namespace Manzadey\SBuilderXmlSoap\Traits;
 
 use JetBrains\PhpStorm\NoReturn;
 
 /**
- * @mixin \Manzadey\SbuilderXmlSoap\Category|\Manzadey\SbuilderXmlSoap\Element|\Manzadey\SbuilderXmlSoap\Field|\Manzadey\SbuilderXmlSoap\Plugin|\Manzadey\SbuilderXmlSoap\Plugins
+ * @mixin \Manzadey\SBuilderXmlSoap\Category|\Manzadey\SBuilderXmlSoap\Element|\Manzadey\SBuilderXmlSoap\Field|\Manzadey\SBuilderXmlSoap\Plugin|\Manzadey\SBuilderXmlSoap\Plugins
  */
 trait HasDump
 {

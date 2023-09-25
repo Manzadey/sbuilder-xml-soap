@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
+use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
 use PHPUnit\Framework\TestCase;
 
 class HasAttributeTraitTest extends TestCase

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SBuilderXmlSoap;
 
 use DOMDocument;
 use DOMElement;
-use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
-use Manzadey\SbuilderXmlSoap\Traits\HasDump;
+use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
+use Manzadey\SBuilderXmlSoap\Traits\HasDump;
 
 final class Field
 {

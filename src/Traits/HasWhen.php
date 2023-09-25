@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Traits;
+namespace Manzadey\SBuilderXmlSoap\Traits;
 
 use Closure;
 

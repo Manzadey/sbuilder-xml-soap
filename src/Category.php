@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap;
+namespace Manzadey\SBuilderXmlSoap;
 
 use Closure;
 use DOMDocument;
 use DOMElement;
-use Manzadey\SbuilderXmlSoap\Exceptions\ElementsArrayException;
-use Manzadey\SbuilderXmlSoap\Traits\HasAttribute;
-use Manzadey\SbuilderXmlSoap\Traits\HasCategory;
-use Manzadey\SbuilderXmlSoap\Traits\HasDump;
-use Manzadey\SbuilderXmlSoap\Traits\HasField;
-use Manzadey\SbuilderXmlSoap\Traits\HasIsDelete;
-use Manzadey\SbuilderXmlSoap\Traits\HasTap;
-use Manzadey\SbuilderXmlSoap\Traits\HasWhen;
+use Manzadey\SBuilderXmlSoap\Exceptions\ElementsArrayException;
+use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
+use Manzadey\SBuilderXmlSoap\Traits\HasCategory;
+use Manzadey\SBuilderXmlSoap\Traits\HasDump;
+use Manzadey\SBuilderXmlSoap\Traits\HasField;
+use Manzadey\SBuilderXmlSoap\Traits\HasIsDelete;
+use Manzadey\SBuilderXmlSoap\Traits\HasTap;
+use Manzadey\SBuilderXmlSoap\Traits\HasWhen;
 
 final class Category
 {
@@ -27,7 +27,7 @@ final class Category
     use HasDump;
 
     /**
-     * @var array<int, \Manzadey\SbuilderXmlSoap\Element>
+     * @var array<int, \Manzadey\SBuilderXmlSoap\Element>
      */
     private array $elements = [];
 

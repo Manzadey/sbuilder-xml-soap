@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Element;
-use Manzadey\SbuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Element;
+use Manzadey\SBuilderXmlSoap\Field;
 use PHPUnit\Framework\TestCase;
 
 class ElementTest extends TestCase

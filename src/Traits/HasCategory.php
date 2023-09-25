@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Traits;
+namespace Manzadey\SBuilderXmlSoap\Traits;
 
 use Closure;
-use Manzadey\SbuilderXmlSoap\Category;
-use Manzadey\SbuilderXmlSoap\Exceptions\CategoriesArrayException;
+use Manzadey\SBuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Exceptions\CategoriesArrayException;
 
 trait HasCategory
 {
     /**
-     * @var array<int, \Manzadey\SbuilderXmlSoap\Category>
+     * @var array<int, \Manzadey\SBuilderXmlSoap\Category>
      */
     private array $categories = [];
 
@@ -21,7 +21,7 @@ trait HasCategory
     }
 
     /**
-     * @param  \Manzadey\SbuilderXmlSoap\Category|\Closure  $category
+     * @param  \Manzadey\SBuilderXmlSoap\Category|\Closure  $category
      *
      * @return $this
      */
@@ -41,7 +41,7 @@ trait HasCategory
     }
 
     /**
-     * @return array<int, \Manzadey\SbuilderXmlSoap\Category>
+     * @return array<int, \Manzadey\SBuilderXmlSoap\Category>
      */
     public function getCategories() : array
     {
@@ -63,7 +63,7 @@ trait HasCategory
      * @param  string  $fieldName
      * @param  string  $value
      *
-     * @return \Manzadey\SbuilderXmlSoap\Category|null
+     * @return \Manzadey\SBuilderXmlSoap\Category|null
      */
     public function getCategoryFromFieldValue(string $fieldName, string $value) : ?Category
     {

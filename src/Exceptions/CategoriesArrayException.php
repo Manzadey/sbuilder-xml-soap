@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Manzadey\SbuilderXmlSoap\Exceptions;
+namespace Manzadey\SBuilderXmlSoap\Exceptions;
 
 use LogicException;
-use Manzadey\SbuilderXmlSoap\Category;
+use Manzadey\SBuilderXmlSoap\Category;
 
 class CategoriesArrayException extends LogicException
 {

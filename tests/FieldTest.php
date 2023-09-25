@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Manzadey\SbuilderXmlSoap\Field;
+use Manzadey\SBuilderXmlSoap\Field;
 use PHPUnit\Framework\TestCase;
 
 class FieldTest extends TestCase
