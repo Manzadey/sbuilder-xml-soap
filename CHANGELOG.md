@@ -102,11 +102,11 @@ All notable changes to `manzadey/sbuilder-xml-soap` will be documented in this f
 ### Changes
 - Update constructor in `Manzadey\SBuilderXmlSoap\Category` and `Manzadey\SBuilderXmlSoap\Element` classes. Added `array $field = []` argument.
 
-[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.7.0...v1.8.0)
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.8.0...v1.9.0)
 
 ## [2.0.0] - 2023-09-25
 
 ### Changes
 - Update namespace package from `Manzadey\SBuilderXmlSoap` to `Manzadey\SBuilderXmlSoap`
 
-[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.7.0...v2.0.0)
+[See all comparing changes](https://github.com/Manzadey/sbuilder-xml-soap/compare/v1.9.0...v2.0.0)
