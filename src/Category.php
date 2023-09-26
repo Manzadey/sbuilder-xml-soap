@@ -139,6 +139,16 @@ final class Category
         return $this->elements;
     }
 
+    public function hasElements() : bool
+    {
+        return !empty($this->getElements());
+    }
+
+    public function countElements() : int
+    {
+        return count($this->getElements());
+    }
+
     /**
      * @throws \DOMException
      */
