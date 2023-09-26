@@ -6,15 +6,13 @@ namespace Manzadey\SBuilderXmlSoap;
 
 use DOMDocument;
 use DOMElement;
-use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
-use Manzadey\SBuilderXmlSoap\Traits\HasCategory;
-use Manzadey\SBuilderXmlSoap\Traits\HasDump;
+use Manzadey\SBuilderXmlSoap\Traits;
 
 final class Plugin
 {
-    use HasAttribute;
-    use HasCategory;
-    use HasDump;
+    use Traits\HasAttribute;
+    use Traits\HasCategory;
+    use Traits\HasDump;
 
     public function __construct(
         readonly private int|string $pluginId
