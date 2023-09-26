@@ -7,21 +7,16 @@ namespace Manzadey\SBuilderXmlSoap;
 use DOMDocument;
 use DOMElement;
 use DOMException;
-use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
-use Manzadey\SBuilderXmlSoap\Traits\HasDump;
-use Manzadey\SBuilderXmlSoap\Traits\HasField;
-use Manzadey\SBuilderXmlSoap\Traits\HasIsDelete;
-use Manzadey\SBuilderXmlSoap\Traits\HasTap;
-use Manzadey\SBuilderXmlSoap\Traits\HasWhen;
+use Manzadey\SBuilderXmlSoap\Traits;
 
 final class Element
 {
-    use HasField;
-    use HasAttribute;
-    use HasIsDelete;
-    use HasWhen;
-    use HasTap;
-    use HasDump;
+    use Traits\HasField;
+    use Traits\HasAttribute;
+    use Traits\HasIsDelete;
+    use Traits\HasWhen;
+    use Traits\HasTap;
+    use Traits\HasDump;
 
     /**
      * @var array<int, int>
