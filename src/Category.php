@@ -8,23 +8,18 @@ use Closure;
 use DOMDocument;
 use DOMElement;
 use Manzadey\SBuilderXmlSoap\Exceptions\ElementsArrayException;
-use Manzadey\SBuilderXmlSoap\Traits\HasAttribute;
-use Manzadey\SBuilderXmlSoap\Traits\HasCategory;
-use Manzadey\SBuilderXmlSoap\Traits\HasDump;
-use Manzadey\SBuilderXmlSoap\Traits\HasField;
-use Manzadey\SBuilderXmlSoap\Traits\HasIsDelete;
-use Manzadey\SBuilderXmlSoap\Traits\HasTap;
-use Manzadey\SBuilderXmlSoap\Traits\HasWhen;
+use Manzadey\SBuilderXmlSoap\Traits;
+
 
 final class Category
 {
-    use HasField;
-    use HasAttribute;
-    use HasCategory;
-    use HasIsDelete;
-    use HasWhen;
-    use HasTap;
-    use HasDump;
+    use Traits\HasField;
+    use Traits\HasAttribute;
+    use Traits\HasCategory;
+    use Traits\HasIsDelete;
+    use Traits\HasWhen;
+    use Traits\HasTap;
+    use Traits\HasDump;
 
     /**
      * @var array<int, \Manzadey\SBuilderXmlSoap\Element>
