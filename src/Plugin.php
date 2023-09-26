@@ -17,10 +17,15 @@ final class Plugin
     use HasDump;
 
     public function __construct(
-        readonly private string $pluginId
+        readonly private int|string $pluginId
     )
     {
-        $this->addAttribute('p_id', $this->pluginId);
+        $this->addAttribute('p_id', (string) $this->pluginId);
+    }
+
+    public static function make(int|string $pluginId) : Plugin
+    {
+        return new Plugin($pluginId);
     }
 
     /**
@@ -28,7 +33,7 @@ final class Plugin
      */
     public function getPluginId() : string
     {
-        return $this->pluginId;
+        return (string) $this->pluginId;
     }
 
     /**

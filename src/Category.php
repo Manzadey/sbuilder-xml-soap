@@ -47,6 +47,16 @@ final class Category
         }
     }
 
+    public static function make(
+        ?string $id = null,
+        ?string $extId = null,
+        ?string $pId = null,
+        array   $fields = []
+    ) : Category
+    {
+        return new Category($id, $extId, $pId, $fields);
+    }
+
     /**
      * @return string|null
      */
@@ -91,7 +101,7 @@ final class Category
      */
     public function newElement(string $id = null, string $extId = null) : Element
     {
-        return new Element($id, $extId);
+        return Element::make($id, $extId);
     }
 
     public function pushElement(Closure|callable $closure, string $id = null, string $extId = null) : Category

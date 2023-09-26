@@ -30,11 +30,13 @@ final class Plugins
 
     private ?string $token = null;
 
-    private array $options = [];
-
-    public function __construct()
+    public function __construct(
+        private readonly array $options = [],
+    )
     {
         $this->xml = $this->createDOMDocument();
+
+        $this->setOptions($this->options);
     }
 
     public function setUrl(?string $url) : Plugins
@@ -53,7 +55,13 @@ final class Plugins
 
     public function setOptions(?array $options) : Plugins
     {
-        $this->options = $options;
+        if(array_key_exists('url', $options)) {
+            $this->setUrl($options['url']);
+        }
+
+        if(array_key_exists('token', $options)) {
+            $this->setUrl($options['token']);
+        }
 
         return $this;
     }

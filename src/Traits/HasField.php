@@ -25,7 +25,7 @@ trait HasField
      */
     public function newField(string $name, string $value) : Field
     {
-        return new Field($name, $value);
+        return Field::make($name, $value);
     }
 
     public function addNewFields(array $fields) : static

@@ -22,6 +22,14 @@ final class Field
         $this->addAttribute('name', $name);
     }
 
+    public static function make(
+        string $name,
+        string $value,
+    ) : Field
+    {
+        return new Field($name, $value);
+    }
+
     /**
      * @return string
      */

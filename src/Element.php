@@ -42,6 +42,15 @@ final class Element
         }
     }
 
+    public static function make(
+        ?string $id = null,
+        ?string $extId = null,
+        array   $fields = [],
+    ) : Element
+    {
+        return new Element($id, $extId, $fields);
+    }
+
     /**
      * @return string|null
      */
