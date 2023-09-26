@@ -149,6 +149,16 @@ final class Category
         return count($this->getElements());
     }
 
+    public function isEmpty() : bool
+    {
+        return empty($this->getCategories()) && empty($this->getElements());
+    }
+
+    public function isNotEmpty() : bool
+    {
+        return !$this->isEmpty();
+    }
+
     /**
      * @throws \DOMException
      */

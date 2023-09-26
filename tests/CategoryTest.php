@@ -115,6 +115,23 @@ class CategoryTest extends TestCase
         $this->assertCount(2, $this->category->getCategories());
     }
 
+    public function testIsEmptyMethod() : void
+    {
+        $category = Category::make();
+        $this->assertTrue(method_exists($category, 'isEmpty'));
+        $this->assertTrue($category->isEmpty());
+        $this->assertFalse($category->isNotEmpty());
+
+        $category->addElement(Element::make());
+
+        $this->assertFalse($category->isEmpty());
+
+        $category = Category::make();
+        $category->addCategory(Category::make());
+        $this->assertFalse($category->isEmpty());
+        $this->assertTrue($category->isNotEmpty());
+    }
+
     /**
      * @throws \DOMException
      */
