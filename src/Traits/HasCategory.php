@@ -48,6 +48,31 @@ trait HasCategory
         return $this->categories;
     }
 
+    public function hasCategories() : bool
+    {
+        return !empty($this->getCategories());
+    }
+
+    public function countCategories() : int
+    {
+        return count($this->getCategories());
+    }
+
+    public function removeCategory(Category $category) : bool
+    {
+        if($this->hasCategories()) {
+            foreach ($this->getCategories() as $i => $existCategory) {
+                if($existCategory === $category) {
+                    unset($this->categories[$i]);
+
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     /**
      * @param  string  $fieldName
      * @param  string  $value
@@ -76,5 +101,47 @@ trait HasCategory
         }
 
         return null;
+    }
+
+    /**
+     * @param  string  $fieldName
+     * @param  string  $value
+     *
+     * @return array<int, Category>
+     */
+    public function getCategoriesByFieldValue(string $fieldName, string $value) : array
+    {
+        $found = [];
+
+        foreach ($this->categories as $category) {
+            foreach ($category->getFields() as $field) {
+                if($fieldName === $field->getName() && $value === $field->getValue()) {
+                    $found[] = $category;
+                }
+            }
+        }
+
+        return $found;
+    }
+
+    /**
+     * @param  string  $name
+     * @param  string  $value
+     *
+     * @return array<int, Category>
+     */
+    public function getCategoriesByAttributeValue(string $name, string $value) : array
+    {
+        $found = [];
+
+        foreach ($this->getCategories() as $category) {
+            foreach ($category->getAttributes() as $attributeName => $attributeValue) {
+                if($attributeName === $name && $attributeValue === $value) {
+                    $found[] = $category;
+                }
+            }
+        }
+
+        return $found;
     }
 }
