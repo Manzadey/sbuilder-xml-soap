@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Manzadey\SBuilderXmlSoap\Traits;
 
-/**
- * @mixin \Manzadey\SBuilderXmlSoap\Traits\HasAttribute
- */
 trait HasIsDelete
 {
     /**
